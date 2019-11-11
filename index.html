@@ -7,7 +7,7 @@
 
 <body>
 <script>
-	function getRecipe(){			
+	function get(){			
 		var ajaxRequest = new XMLHttpRequest();
 		ajaxRequest.onreadystatechange = function(){
 			if(ajaxRequest.readyState == 1){
@@ -40,13 +40,13 @@
 			else{
 				console.log("Ignored readyState: " + ajaxRequest.readyState);
 			}
-		ajaxRequest.open("GET", "https://api.spotify.com", true);
+		ajaxRequest.open("GET", "https://api.spotify.com/571adf1512c6a86acd5ce0643f417b54", true);
 		ajaxRequest.withCredentials = true;
-//		ajaxRequest.setRequestHeader("Content-Type", "application/json");
+		ajaxRequest.setRequestHeader("Content-Type", "application/json");
 		ajaxRequest.send();
 	};
 
-	$('beep').click(getRecipe());
+	$('beep').click(get());
 </script>
 <button class="beep">Push</button>
 <div id="welcome"></div>
