@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9gjDs2-rhSSPh1BNO25RZwvWaaIbR7-c&callback=initMap" async defer></script>
+
 </head>
 
 <body>
@@ -40,7 +45,7 @@
 			else{
 				console.log("Ignored readyState: " + ajaxRequest.readyState);
 			}
-		ajaxRequest.open("GET", "http://www.recipepuppy.com/api/", true);
+		ajaxRequest.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YAIzaSyC9gjDs2-rhSSPh1BNO25RZwvWaaIbR7-c", true);
 		ajaxRequest.withCredentials = true;
 		ajaxRequest.setRequestHeader("Content-Type", "application/json");
 		ajaxRequest.send();
