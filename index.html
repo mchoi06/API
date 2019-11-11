@@ -41,7 +41,9 @@
 				console.log("Ignored readyState: " + ajaxRequest.readyState);
 			}
 		ajaxRequest.open("GET", "http://www.recipepuppy.com/api/", true);
-		ajaxRequest.send();
+		ajaxRequest.withCredentials = true;
+		ajaxRequest.setRequestHeader("Content-Type", "application/json");
+		ajaxRequest.send({ 'request': "authentication token" });
 	};
 
 	$('beep').click(getRecipe());
