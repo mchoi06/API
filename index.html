@@ -40,7 +40,7 @@
 			else{
 				console.log("Ignored readyState: " + ajaxRequest.readyState);
 			}
-		ajaxRequest.open("GET", "https://api.spotify.com/571adf1512c6a86acd5ce0643f417b54", true);
+		ajaxRequest.open("GET", "https://accounts.spotify.com/authorize?client_id=571adf1512c6a86acd5ce0643f417b54", true);
 		ajaxRequest.withCredentials = true;
 		ajaxRequest.setRequestHeader("Content-Type", "application/json");
 		ajaxRequest.send();
