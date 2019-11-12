@@ -1,3 +1,20 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@mchoi06 
+1
+00mchoi06/API
+ Code Issues 0 Pull requests 0 Projects 0 Wiki Security Insights Settings
+API/index.html
+@mchoi06 mchoi06 Update index.html
+5b21e22 33 minutes ago
+50 lines (46 sloc)  1.59 KB
+  
 <!doctype html>
 <html>
 <head>
@@ -23,11 +40,10 @@
 				console.log("Done loading!" + ajaxRequest.readyState + "status=" + ajaxRequest.status);
 				if(ajaxRequest.status == 200){
 					console.log("It worked!");
+					$('#display').html(ajaxRequest.responseText);
 					var result = ajaxRequest.responseText;
 					var info = JSON.parse(result);
-					$('#display').append("Formatted Address: " + info["results"][0]["formatted_address"]);
-							    // "<br> Neighborhood: " + info["results"][0]["address_components"][2]["long_name"]) +
-							     //"<br> County: " + info["results"][0]["address_components"][4]["long_name"];
+					$('#display').append("<br> BABY SHARK DOOO" + info["results"][0]["formatted_address"]);
 				}
 				else{
 					console.log("Status error: " + ajaxRequest.status);
@@ -39,7 +55,6 @@
 		ajaxRequest.setRequestHeader("Content-Type", "application/json");
 		ajaxRequest.send();
 	};
-
 	$('description').load(get());
 </script>
 <button class="beep">Push</button>
@@ -48,3 +63,15 @@
 
 </body>
 </html>
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
