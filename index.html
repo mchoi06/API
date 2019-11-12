@@ -11,21 +11,21 @@
 		var ajaxRequest = new XMLHttpRequest();
 		ajaxRequest.onreadystatechange = function(){
 			if(ajaxRequest.readyState == 1){
-				console.log("Established server connection." + ajaxRequest.readyState);
+				console.log("Established server connection." + ajaxRequest.readyState + "status=" + ajaxRequest.readyState);
 			}
 			else if(ajaxRequest.readyState == 2){
-				console.log("Request received by server." + ajaxRequest.readyState);
+				console.log("Request received by server." + ajaxRequest.readyState + "status=" + ajaxRequest.readyState);
 			}
 			else if(ajaxRequest.readyState == 3){
-				console.log("Processing request." + ajaxRequest.readyState);
+				console.log("Processing request." + ajaxRequest.readyState "status=" + ajaxRequest.readyState);
 			}
 			else if(ajaxRequest.readyState == 4){
-				console.log("Done loading!" + ajaxRequest.readyState);
+				console.log("Done loading!" + ajaxRequest.readyState "status=" + ajaxRequest.readyState);
 			}
 			else{
 				console.log("Something went wrong. :(");
 			}
-			console.log("Ready state chaned!");
+			console.log("Ready state changed!");
 			}
 			if(ajaxRequest.readyState == 4){
 				if(ajaxRequest.status == 200){
