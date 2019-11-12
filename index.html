@@ -23,7 +23,9 @@
 				console.log("Done loading!" + ajaxRequest.readyState + "status=" + ajaxRequest.status);
 				if(ajaxRequest.status == 200){
 					console.log("It worked!");
-					$('#display').html('Stuff = ' + ajaxRequest.responseText);
+					$('#display').html(ajaxRequest.responseText);
+					var result = ajaxRequest.responseText;
+					var info = JSON.parse(result);
 				}
 				else{
 					console.log("Status error: " + ajaxRequest.status);
