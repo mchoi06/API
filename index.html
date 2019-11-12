@@ -28,6 +28,7 @@
 					$('#display').append("Formatted Address: " + info["results"][0]["formatted_address"] +
 							     "<br> Neighborhood: " + info["results"][0]["address_components"][2]["long_name"]) +
 							     "<br> County: " + info["results"][0]["address_components"][4]["long_name"]);
+				}
 				else{
 					console.log("Status error: " + ajaxRequest.status);
 				}			}
