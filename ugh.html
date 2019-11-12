@@ -12,7 +12,7 @@
  
 			// Step 2: Set the URL for the AJAX request to be the JSON file
  
-			request.open("GET", "http://api.openweathermap.org/data/2.5/weather?id=4317656&units=imperial&APPID=6e477249e2b1e0f4d6461a66a1947eaa", true);
+			request.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=1325+66th+Street,+Brooklyn,+NY&key=AIzaSyC9gjDs2-rhSSPh1BNO25RZwvWaaIbR7-c", true);
 
 			console.log("2 - opened request file");
  
@@ -27,9 +27,9 @@
 
 					result = request.responseText;
 					alert(result)
-					weather = JSON.parse(result);
+					info = JSON.parse(result);
 					
-					document.getElementById("data").innerHTML ="current temp in boston: " + weather["main"]["temp"]; 
+					document.getElementById("data").innerHTML ="current temp in boston: " + info; 
 					
 				}
 				else if (request.readyState == 4 && request.status != 200) {
