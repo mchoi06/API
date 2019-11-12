@@ -45,7 +45,7 @@
 			else{
 				console.log("Ignored readyState: " + ajaxRequest.readyState);
 			}
-		ajaxRequest.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyC9gj...vWaaIbR7-c", true);
+		ajaxRequest.open("GET", "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyC9gj...vWaaIbR7-c", true);
 		ajaxRequest.withCredentials = true;
 		ajaxRequest.setRequestHeader("Content-Type", "application/json");
 		ajaxRequest.send();
