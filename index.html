@@ -27,11 +27,12 @@
 					var info = JSON.parse(result);
 					$('#display').append("Formatted Address: " + info["results"][0]["formatted_address"] + 
 							    "<br> Neighborhood: " + info["results"][0]["address_components"][2]["long_name"] +
-							    "<br> County: " + info["results"][0]["address_components"][4]["long_name" + "<br>"]);
+							    "<br> County: " + info["results"][0]["address_components"][4]["long_name"] + "<br>");
 				}
 				else{
 					console.log("Status error: " + ajaxRequest.status);
-				}			}
+				}
+			$('#display').append("<br>");			}
 			console.log("Ready state changed!");
 			}
 		ajaxRequest.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=1325+66th+Street,+Brooklyn,+NY&key=AIzaSyC9gjDs2-rhSSPh1BNO25RZwvWaaIbR7-c", true);
