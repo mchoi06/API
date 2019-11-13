@@ -25,9 +25,9 @@
 					console.log("It worked!");
 					var result = ajaxRequest.responseText;
 					var info = JSON.parse(result);
-					$('#display').append("Formatted Address: " + info["results"][0]["formatted_address"] + 
-							    "<br> Neighborhood: " + info["results"][0]["address_components"][2]["long_name"] +
-							    "<br> County: " + info["results"][0]["address_components"][4]["long_name"] + "<br>");
+					$('#display').append("<b>Formatted Address: </b>" + info["results"][0]["formatted_address"] + 
+							    "<br> <b>Neighborhood: </b>" + info["results"][0]["address_components"][2]["long_name"] +
+							    "<br> <b>County: </b>" + info["results"][0]["address_components"][4]["long_name"] + "<br>");
 				}
 				else{
 					console.log("Status error: " + ajaxRequest.status);
@@ -43,7 +43,7 @@
 </script>
 <div id="display"></div>
 <div id="description">
-	<b>API Description:</b> This API is from Google Map and it gies you data
+	<b>API Description:</b> This API is from Google Maps and it gies you data
 	(in a JSON format) about locations that you input into the query. <br><br>
 	<b>Website Source:</b> The API documentation can be found <a href="https://developers.google.com/maps/documentation/geocoding/start?hl=en_US">here</a> <br><br>
 	<b>Options for API request:</b> The option that is used for this API request 
