@@ -30,7 +30,7 @@
 					console.log("It worked!");
 					var result = ajaxRequest.responseText;
 					var info = JSON.parse(result);
-					$('#display').append("<b>Requested url:</b> https://maps.googleapis.com/maps/api/geocode/json?address=1325+66th+Street,+Brooklyn,+NY&key=AIzaSyC9gjDs2-rhSSPh1BNO25RZwvWaaIbR7-c <br>" + 
+					$('#display').append("<b>Requested url:</b> https://maps.googleapis.com/maps/api/geocode/json?address=1325+66th+Street,+Brooklyn,+NY&key=AIzaSyC9gjDs2-rhSSPh1BNO25RZwvWaaIbR7-c <br> <br>" + 
 								"<b>Formatted Address: </b>" + info["results"][0]["formatted_address"] + 
 							    "<br> <b>Neighborhood: </b>" + info["results"][0]["address_components"][2]["long_name"] +
 							    "<br> <b>County: </b>" + info["results"][0]["address_components"][4]["long_name"] + "<br>");
