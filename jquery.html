@@ -37,6 +37,7 @@
 		ajaxRequest.open("GET", "https://mchoi06.github.io/API/stuff.json", true);
 		ajaxRequest.withCredentials = true;
 		ajaxRequest.setRequestHeader("Content-Type", "application/json");
+		ajaxRequest.setRequestHeader("Access-Control-Allow-Origin", "*");
 		ajaxRequest.send();
 	};
 	$('display').ready(get());
