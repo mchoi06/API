@@ -37,7 +37,7 @@
 		ajaxRequest.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=1325+66th+Street,+Brooklyn,+NY&key=AIzaSyC9gjDs2-rhSSPh1BNO25RZwvWaaIbR7-c", true);
 		//ajaxRequest.withCredentials = true;
 		ajaxRequest.setRequestHeader("Content-Type", "application/json");
-		ajaxRequest.setRequestHeader("Access-Control-Allow-Origin", "*");
+		//ajaxRequest.setRequestHeader("Access-Control-Allow-Origin", "*");
 		ajaxRequest.send();
 	};
 	$('display').ready(get());
