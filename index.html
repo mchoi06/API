@@ -40,11 +40,29 @@
 	};
 	$('display').ready(get());
 </script>
-<div id="display"><br></div>
+<div id="display"><br><br></div>
 <div id="description">
 	<b>API Description:</b> This API is from Google Map and it gies you data
 	(in a JSON format) about locations that you input into the query. <br>
-	Website Source: The API documentation can be found <a href="https://developers.google.com/maps/documentation/geocoding/start?hl=en_US">here</a>
+	<b>Website Source:<br> The API documentation can be found <a href="https://developers.google.com/maps/documentation/geocoding/start?hl=en_US">here</a> <br>
+	<b>Options for API request:</b> The option that is used for this API request 
+	is the "address" query. You can input any part of an address (street number, 
+	neighborhood, county, city, state, country, etc.) and it will return
+	other components of the address that are associated with it along with
+	latitutde and longitude coordinates. Another opiton that is offered is 
+	the "component" query, which is used as a filter for when people have a part
+	of an address and want to specify a specific component to narrow down their 
+	search (ie. searching for an address in one specific country)<br>
+	<b>Useful applications:</b>
+		<ul>
+			<li>If you know one part of an address (ie. zip code) and want to 
+			find out what the other components (ie. city, state, etc.) are.</li>
+			<li>If you have the address of a location and want to know its
+			specific latitude and longitude coordinates.</li>
+			<li>If you have an address that exists in multiple countries, but
+			you want to narrow it down to a specific country or region. </li>
+		</ul>
+
 </div>
 
 </body>
